@@ -1,0 +1,9 @@
+server:  
+      port: 8080
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5p - %m%n"
+  level:
+    org.apache.camel: INFO
+
+routeKeystore: truststore.jks

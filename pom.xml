@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.msip</groupId>
+  <artifactId>msip.templateroute</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0</version>
+
+  <name>MSIP templateroute</name>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.8</version>
+    <relativePath /> <!-- lookup parent from repository -->
+  </parent>
+
+
+  <properties>
+    <java.version>11</java.version>
+    <camel.version>3.20.1</camel.version>
+  </properties>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>msip-lib-snapshot-local</id>
+      <url>http://artifactory.amerhonda.com:8081/artifactory/msip-lib-snapshot-local</url>
+    </snapshotRepository>
+    <repository>
+      <id>msip-lib-release-local</id>
+      <url>http://artifactory.amerhonda.com:8081/artifactory/msip-lib-release-local</url>
+    </repository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <id>msip-lib-snapshot-local</id>
+      <url>http://artifactory.amerhonda.com:8081/artifactory/msip-lib-snapshot-local</url>
+    </repository>
+    <repository>
+      <id>msip-libs-release</id>
+      <url>http://artifactory.amerhonda.com:8081/artifactory/msip-libs-release</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>plugins-release</id>
+      <url>http://artifactory.amerhonda.com:8081/artifactory/plugins-release</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-spring-boot-starter</artifactId>
+      <version>${camel.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-servlet-starter</artifactId>
+      <version>${camel.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-http-starter</artifactId>
+      <version>${camel.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-jackson</artifactId>
+      <version>${camel.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.15.1</version>
+  </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

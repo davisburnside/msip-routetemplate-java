@@ -1,0 +1,3 @@
+authenticationServiceUrl: https://msip-infra-ldap-sbx.apps.sbxocp.amerhonda.com/authenticateUser
+sampleAPIUrl: https://msip-infra-sampleapi-sbx.apps.sbxocp.amerhonda.com/getCoffeeTypess
+notificationAPIURL: https://aamsip-notification-sbx.apps.sbxocp.amerhonda.com/notification/email
